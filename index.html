@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formula 1 School Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+  <h1>F1 School Team</h1>
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+  <ul class="nav-links">
+    <li><a href="#team">Meet the Team</a></li>
+    <li><a href="#who">Who We Are?</a></li>
+    <li><a href="#marketing">Marketing & Sales</a></li>
+    <li><a href="#prototype">Prototype</a></li>
+    <li><a href="#experience">Our Experience</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <section id="team">
+    <h2>Meet the Team</h2>
+    <img src="1.jpg" alt="Team Photo" class="main-photo">
+    <p>We are a team of passionate students competing in a Formula 1 school challenge.</p>
+    <div class="members">
+      <div class="member"><img src="1.jpg" class="scroll-anim" alt=""><h3>Member 1</h3><p>Team Leader</p></div>
+      <div class="member"><img src="1.jpg" class="scroll-anim" alt=""><h3>Member 2</h3><p>Engineer</p></div>
+      <div class="member"><img src="1.jpg" class="scroll-anim" alt=""><h3>Member 3</h3><p>Designer</p></div>
+      <div class="member"><img src="1.jpg" class="scroll-anim" alt=""><h3>Member 4</h3><p>Marketing</p></div>
+      <div class="member"><img src="1.jpg" class="scroll-anim" alt=""><h3>Member 5</h3><p>Finance</p></div>
+    </div>
+  </section>
+
+  <section id="who">
+    <h2>Who We Are?</h2>
+    <div class="images-row">
+      <img src="1.jpg" class="scroll-anim" alt="">
+      <img src="1.jpg" class="scroll-anim" alt="">
+      <img src="1.jpg" class="scroll-anim" alt="">
+    </div>
+    <img src="1.jpg" alt="Team Logo" class="logo">
+    <div class="palette">
+      <div class="color" style="background:#0B1D92"></div>
+      <div class="color" style="background:#D01C1F"></div>
+      <div class="color" style="background:#27272A"></div>
+      <div class="color" style="background:#fff; border:1px solid #ccc;"></div>
+    </div>
+    <p>We are creative, competitive and love challenges. Our mission is to innovate and perform.</p>
+    <p>With diverse skills and team spirit, we represent the future of motorsport engineers.</p>
+  </section>
+
+  <section id="marketing">
+    <h2>Marketing Campaign and Sales</h2>
+    <div class="marketing-box">
+      <div>
+        <p>Support our journey!</p>
+        <img src="1.jpg" class="scroll-anim" alt="Sponsorship Request">
+      </div>
+      <div>
+        <p>We sell exclusive merchandise to fund our project.</p>
+        <img src="1.jpg" class="scroll-anim" alt="Sales">
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">TikTok</a>
+    </div>
+  </section>
+
+  <section id="prototype">
+    <h2>Prototype</h2>
+    <div class="prototype-grid">
+      <div><img src="1.jpg" class="scroll-anim" alt=""><p>Initial Concept</p></div>
+      <div><img src="1.jpg" class="scroll-anim" alt=""><p>3D Design</p></div>
+      <div><img src="1.jpg" class="scroll-anim" alt=""><p>Final Model</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Our Experience</h2>
+    <p>Working together on this project has taught us teamwork, time management, and engineering skills. It's been a thrilling ride!</p>
+  </section>
+
+  <section id="sponsors">
+    <h2>Sponsors</h2>
+    <div class="sponsor-logos">
+      <img src="1.jpg" class="scroll-anim" alt="Sponsor 1">
+      <img src="1.jpg" class="scroll-anim" alt="Sponsor 2">
+      <img src="1.jpg" class="scroll-anim" alt="Sponsor 3">
+    </div>
+    <p class="thank-you">We thank our generous sponsors for supporting our dream!</p>
+  </section>
+
+  <footer>
+    <p>© 2025 F1 School Team</p>
+  </footer>
+
+
+
+
+ <script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const links = document.querySelectorAll('.nav-links a');
+
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.scroll-anim').forEach(el => observer.observe(el));
+</script>
+
+
+</body>
+</html>
