@@ -208,7 +208,7 @@ in these competitions.</p>
     <p>© 2025 TZUME Team</p>
   </footer>
 
-
+<a href="#" class="scroll-to-top" aria-label="Back to top">&#8679;</a>
 
 
  <script>
@@ -239,6 +239,25 @@ in these competitions.</p>
   document.querySelectorAll('.scroll-anim').forEach(el => observer.observe(el));
 </script>
 
+<script>
+  const scrollBtn = document.querySelector('.scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add('show');
+    } else {
+      scrollBtn.classList.remove('show');
+    }
+  });
+
+  scrollBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 
 </body>
 </html>
