@@ -260,6 +260,32 @@ footer {
   transform: translateY(0);
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #D01C1F;
+  color: white;
+  padding: 10px 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.scroll-to-top:hover {
+  background: #0B1D92;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
