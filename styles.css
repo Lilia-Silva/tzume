@@ -12,16 +12,16 @@ body {
   font-family: 'Arial', sans-serif;
   background: #121212;
   color: #ffffff;
+  padding-top: 120px;
 }
 
 header {
-  background: #000;
-  color: white;
-  padding: 10px 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+  background: #000;
 }
 
 nav {
@@ -32,16 +32,24 @@ nav {
 }
 
 nav h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #D01C1F;
+  padding-left: 20px;
+  padding-bottom: 0;
+  
+}
+nav .menu-toggle{
+  padding-left: 20px;
+  font-size: 2.5rem;
+  padding-top: 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
-  padding: 0;
   margin: 0;
+  padding-right: 20px;
 }
 
 nav ul li a {
@@ -49,6 +57,7 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
+ 
 }
 
 nav ul li a:hover {
@@ -152,6 +161,23 @@ p{
   gap: 20px;
   justify-content: space-around;
 }
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 48px;
+  margin: 0 15px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #0B1D92;
+}
+
 
 .marketing-box img {
   border: 2px solid #0B1D92;
@@ -290,6 +316,7 @@ footer {
   nav {
     flex-direction: column;
     align-items: flex-start;
+
   }
 
   .menu-toggle {
